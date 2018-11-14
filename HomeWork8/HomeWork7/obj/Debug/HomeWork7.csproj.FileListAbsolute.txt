@@ -1,0 +1,14 @@
+C:\Users\10929\Desktop\HomeWork6\HomeWork7\bin\Debug\HomeWork6.exe.config
+C:\Users\10929\Desktop\HomeWork6\HomeWork7\bin\Debug\HomeWork6.exe
+C:\Users\10929\Desktop\HomeWork6\HomeWork7\bin\Debug\HomeWork6.pdb
+C:\Users\10929\Desktop\HomeWork6\HomeWork7\obj\Debug\HomeWork7.csprojResolveAssemblyReference.cache
+C:\Users\10929\Desktop\HomeWork6\HomeWork7\obj\Debug\HomeWork7.csproj.CoreCompileInputs.cache
+C:\Users\10929\Desktop\HomeWork6\HomeWork7\obj\Debug\HomeWork6.exe
+C:\Users\10929\Desktop\HomeWork6\HomeWork7\obj\Debug\HomeWork6.pdb
+C:\Users\10929\learngit\HomeWork7\HomeWork7\bin\Debug\HomeWork6.exe.config
+C:\Users\10929\learngit\HomeWork7\HomeWork7\bin\Debug\HomeWork6.exe
+C:\Users\10929\learngit\HomeWork7\HomeWork7\bin\Debug\HomeWork6.pdb
+C:\Users\10929\learngit\HomeWork7\HomeWork7\obj\Debug\HomeWork7.csprojResolveAssemblyReference.cache
+C:\Users\10929\learngit\HomeWork7\HomeWork7\obj\Debug\HomeWork7.csproj.CoreCompileInputs.cache
+C:\Users\10929\learngit\HomeWork7\HomeWork7\obj\Debug\HomeWork6.exe
+C:\Users\10929\learngit\HomeWork7\HomeWork7\obj\Debug\HomeWork6.pdb
