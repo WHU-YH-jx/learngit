@@ -20,7 +20,10 @@ namespace WindowsFormsApp1
         }
         public OrderDetails GetOrderI()
         {
-            return changeOrder;
+            if (changeOrder != null)
+                return changeOrder;
+            else
+                return null;
         }
         private void button1_Click(object sender, EventArgs e)
         {

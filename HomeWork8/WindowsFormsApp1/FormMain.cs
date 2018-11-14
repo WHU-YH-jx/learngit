@@ -40,15 +40,7 @@ namespace WindowsFormsApp1
             Oporder.AddOrder(FourthOrder);
             
         }
-        private void FormMain_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
+      
         private void AddOrder()
         {
             AddOrder addform = new AddOrder();
@@ -57,7 +49,6 @@ namespace WindowsFormsApp1
             if (newOdetail != null)
             {
                 Oporder.OrderList.Add(newOdetail);
-                OporderbindingSource1.DataSource = Oporder;
             }
         }
         private void button2_Click(object sender, EventArgs e)
@@ -69,7 +60,7 @@ namespace WindowsFormsApp1
         {
             panel1.Visible = true;
         }
-        private void ChangeOrder()
+        private void ChangeOrder()           //修改订单
         {
             ChangeOrder changeform = new ChangeOrder();
             changeform.ShowDialog();
@@ -79,20 +70,15 @@ namespace WindowsFormsApp1
                 if (newOdetail != null && newOdetail.OrderNumber == Oporder.OrderList[i].OrderNumber)
                 {
                     Oporder.OrderList[i] = newOdetail;
-                    OporderbindingSource1.DataSource = Oporder;
                 }
             }
         }
-        private void button4_Click(object sender, EventArgs e)
-        {
-            ChangeOrder();
-        }
-        private void LookForOrder()
+        private void LookForOrder()          //查找订单
         {
             switch (comboBox1.SelectedIndex)
             {
                 case 0:
-                    OporderbindingSource1.DataSource = Oporder;
+                    OrderDetailbindingSource1.DataSource = Oporder.OrderList;
                     break;
                 case 1:
                     OrderDetailbindingSource1.DataSource = Oporder.LookForOrderI(textBox2.Text);
@@ -102,26 +88,22 @@ namespace WindowsFormsApp1
                     break;
             }
         }
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)      //查找订单信息
         {
             LookForOrder();
         }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void button7_Click(object sender, EventArgs e)      //删除订单
         {
-
+            panel1.Visible = false;
+            string delete = textBox3.Text;
+            Oporder.DeleteOrderI(delete);
         }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e)      //修改订单
         {
-
+            ChangeOrder();
         }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-        public ArrayList JudgePNumber()          //验证客户手机号是否正确
+      
+        public ArrayList JudgePNumber()                          //验证客户手机号是否正确
         {
             ArrayList Array = new ArrayList();
             Regex rx = new Regex("[0-9]{3}-[0-9]{4}-[0-9]{4}");
@@ -136,7 +118,7 @@ namespace WindowsFormsApp1
             }
             return Array;
         }
-        public ArrayList JudgeOrderNumber()           //验证订单号是否正确
+        public ArrayList JudgeOrderNumber()                     //验证订单号是否正确
         {
             ArrayList Array = new ArrayList();
             Regex rx = new Regex("[0-9]{4}/[0-9]{2}/[0-9]{2}/[0-9]{3}");
@@ -151,7 +133,11 @@ namespace WindowsFormsApp1
             }
             return Array;
         }
-        public void ExportHTML()                      //输出成html文件
+        private void button6_Click(object sender, EventArgs e) //生成html文件按钮
+        {
+            ExportHTML();
+        }
+        public void ExportHTML()                               //输出成html文件
         {
             Oporder.Export("a.xml", Oporder.OrderList);
             XslCompiledTransform trans = new XslCompiledTransform();
@@ -162,16 +148,15 @@ namespace WindowsFormsApp1
         {
             ArrayList h1 = JudgePNumber();
             ArrayList h2 = JudgeOrderNumber();
-     
-            if(h1!=null)
+
+            if (h1.Count != 0)
             {
                 textBox1.Visible = true;
                 for (int i = 0; i < h1.Count; i++)
                 {
-                   
                     textBox1.Text += "第" + h1[i] + "个订单的手机号出现了问题！！！！" + "\n";
                 }
-                if (h2 != null)
+                if (h2.Count != 0)
                 {
                     for (int j = 0; j < h2.Count; j++)
                     {
@@ -179,7 +164,7 @@ namespace WindowsFormsApp1
                     }
                 }
             }
-            else if(h2!=null)
+            else if (h2.Count != 0)
             {
                 textBox1.Visible = true;
                 for (int j = 0; j < h2.Count; j++)
@@ -189,9 +174,10 @@ namespace WindowsFormsApp1
             }
             else
             {
+                textBox1.Text = "所有订单的订单号及手机号均正确！！！";
                 textBox1.Visible = true;
-                textBox1.Text ="所有订单的订单号及手机号均正确！！！";
             }
+
         }
 
         private void textBox1_TextChanged_1(object sender, EventArgs e)
@@ -199,24 +185,36 @@ namespace WindowsFormsApp1
 
         }
 
-        private void button6_Click(object sender, EventArgs e)
-        {
-            ExportHTML();
-        }
+        
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
-
-        private void button7_Click(object sender, EventArgs e)
+        private void FormMain_Load(object sender, EventArgs e)
         {
-            panel1.Visible = false;
-            string delete = textBox3.Text;
-            Oporder.DeleteOrderI(delete);
+
         }
 
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
         private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

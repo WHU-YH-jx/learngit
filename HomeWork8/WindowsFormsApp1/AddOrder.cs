@@ -22,6 +22,7 @@ namespace WindowsFormsApp1
         }
         public OrderDetails GetOrderI()
         {
+           
             return newO;
         }
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -54,13 +55,17 @@ namespace WindowsFormsApp1
             string CustomerName = textBox4.Text;
             string s4 = textBox5.Text;
             string s5 = textBox6.Text;
-            newO= new OrderDetails(s4, CustomerName, GoodsName, GoodsNumber, GoodsPrice,s5);
+            newO = new OrderDetails(s4, CustomerName, GoodsName, GoodsNumber, GoodsPrice, s5);
 
             this.Close();
- 
         }
 
         private void textBox6_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AddOrder_Load(object sender, EventArgs e)
         {
 
         }

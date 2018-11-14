@@ -19,18 +19,22 @@ namespace HomeWork7
         public OrderService() { }
         public void AddOrder(OrderDetails first)                        //增加订单
         {
+            if(first!=null)
             OrderList.Add(first);
         }
 
         public void DeleteOrderI(string input)                              //根据订单号删除订单
         {
             int count = 0;
-            for (int i = 0; i < OrderList.Count; i++)
+            if (input != null)
             {
-                if (input == OrderList[i].OrderNumber)
+                for (int i = 0; i < OrderList.Count; i++)
                 {
-                    OrderList.Remove(OrderList[i]);
-                    count++;
+                    if ( input == OrderList[i].OrderNumber)
+                    {
+                        OrderList.Remove(OrderList[i]);
+                        count++;
+                    }
                 }
             }
             if (count == 0)
@@ -130,6 +134,7 @@ namespace HomeWork7
         {
    
             int a = 0;
+            if (input == null) return null;
             for (int i = 0; i < OrderList.Count; i++)
             {
                 if (input == OrderList[i].OrderNumber)

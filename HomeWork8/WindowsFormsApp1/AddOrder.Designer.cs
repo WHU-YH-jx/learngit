@@ -168,7 +168,7 @@
             // 
             this.bindingSource1.DataSource = typeof(HomeWork7.OrderService);
             // 
-            // Form1
+            // AddOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -186,8 +186,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
-            this.Name = "Form1";
+            this.Name = "AddOrder";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.AddOrder_Load);
             ((System.ComponentModel.ISupportInitialize)(this.detailbindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
