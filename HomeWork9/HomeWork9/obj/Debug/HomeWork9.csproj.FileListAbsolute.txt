@@ -1,0 +1,7 @@
+F:\C#\Crawler\HomeWork9\bin\Debug\HomeWork9.exe.config
+F:\C#\Crawler\HomeWork9\bin\Debug\HomeWork9.exe
+F:\C#\Crawler\HomeWork9\bin\Debug\HomeWork9.pdb
+F:\C#\Crawler\HomeWork9\obj\Debug\HomeWork9.csprojResolveAssemblyReference.cache
+F:\C#\Crawler\HomeWork9\obj\Debug\HomeWork9.csproj.CoreCompileInputs.cache
+F:\C#\Crawler\HomeWork9\obj\Debug\HomeWork9.exe
+F:\C#\Crawler\HomeWork9\obj\Debug\HomeWork9.pdb
