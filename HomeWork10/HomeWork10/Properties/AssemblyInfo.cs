@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // 有关程序集的一般信息由以下
 // 控制。更改这些特性值可修改
 // 与程序集关联的信息。
-[assembly: AssemblyTitle("EFDemo")]
+[assembly: AssemblyTitle("HomeWork10")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("EFDemo")]
+[assembly: AssemblyProduct("HomeWork10")]
 [assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // 如果此项目向 COM 公开，则下列 GUID 用于类型库的 ID
-[assembly: Guid("25d5f10f-89e4-40c2-8838-87dacea67139")]
+[assembly: Guid("e5d803cc-266b-457f-a9fe-74deac1ced0d")]
 
 // 程序集的版本信息由下列四个值组成: 
 //

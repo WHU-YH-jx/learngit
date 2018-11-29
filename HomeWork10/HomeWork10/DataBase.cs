@@ -8,12 +8,14 @@ using System.Threading.Tasks;
 
 namespace HomeWork10
 {
-    public class DataBase:DbContext {
-        public DataBase():base("OrderDataBase") {
+    public class DataBase : DbContext
+    {
+        public DataBase() : base("OrderData")
+        {
         }
         public DbSet<Order> Order { get; set; }
 
-        public DbSet<OrderDetail> OrderItem { get; set; }
-    
+        public DbSet<OrderDetails> OrderDetails { get; set; }
+
     }
 }
